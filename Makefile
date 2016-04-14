@@ -15,6 +15,7 @@ LIBS		:= $(foreach DIR, $(LIB_DIR), $(DIR)/$(DIR).a)
 LIB_DIR_OBJ	 = $(foreach DIR, $(LIB_DIR), $(wildcard $(DIR)/obj/*.o))
 
 DISPLAYNAME = echo "\033[32mLibrary created: \033[31m[\033[1m $(NAME) \033[22m]\033[0m"
+###
 
 .PHONY: all clean fclean test re
 
