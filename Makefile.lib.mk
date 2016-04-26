@@ -13,18 +13,19 @@ DEP		:= $(SRCS:%.c=obj/dep/%.d)
 TESTOBJ	:= $(SRCS:%.c=tests/obj/%)
 TESTDEP	:= $(SRCS:%.c=tests/obj/dep/%.d)
 SRCS	:= $(addprefix sources/, $(SRCS))
+DIRNAME	:= $(shell pwd)
+DIRNAME	:= $(notdir $(realpath $(dir $(DIRNAME))))/$(notdir $(DIRNAME))
 
 DISPLAYNAME = echo "\033[35m-> \033[4mLibrary created\033[24m "\
 			  		"\033[31m[ \033[1m$(NAME)\033[22m ]\033[0m"
-DISPLAYOBJECT = echo "\033[34mObject file created : \033[1;34m$@\033[0m"
+DISPLAYOBJECT = echo "\033[34mObject file created : \033[1;34m$(DIRNAME)/$@\033[0m"
 
 .PHONY: all prepare clean fclean re libs test objs
 
 all: prepare $(NAME)
 
 prepare:
-	@mkdir -p obj/dep/
-	@mkdir -p tests/obj/dep
+	@mkdir -p obj/dep/ tests/obj/dep
 
 $(NAME): $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
