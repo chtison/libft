@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/macros.h"
+#include "libft/misc/macros.h"
 #include "libft/libstd/libstd.h"
 
 char	*ft_strcat(const char *s1, const char *s2)

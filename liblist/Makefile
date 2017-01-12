@@ -18,4 +18,4 @@ SRCS	:= $(addsuffix .c, $(addprefix ft_list_, \
 			))
 LIBS	:= ../libstd/libstd.a
 
-include ../Makefile.lib.mk
+include ../misc/Makefile.lib.mk

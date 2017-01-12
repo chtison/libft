@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/macros.h"
+#include "libft/misc/macros.h"
 
 char	*ft_strndup(const char *str, size_t n)
 {

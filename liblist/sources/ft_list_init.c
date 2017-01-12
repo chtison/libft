@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/macros.h"
+#include "libft/misc/macros.h"
 #include "libft/liblist/liblist.h"
 
 t_list		*ft_list_init(void)
