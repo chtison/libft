@@ -16,6 +16,7 @@
 char	*ft_itoa(ssize_t nbr)
 {
 	if (nbr < 0)
-		return (ft_strcat_and_free("-", ft_uitoa((size_t)(nbr * -1)), 0, 1));
+		return (ft_strcat_and_free("-",
+				ft_uitoa((size_t)(nbr * -1)), 0, 1));
 	return (ft_uitoa((size_t)nbr));
 }

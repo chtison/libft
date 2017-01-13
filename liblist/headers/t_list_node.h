@@ -17,7 +17,7 @@ typedef	struct				s_list_node
 {
 	struct s_list_node		*prev;
 	struct s_list_node		*next;
-	const void				*data;
-}							t_list_node;
+	const void			*data;
+}					t_list_node;
 
 #endif

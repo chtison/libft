@@ -15,8 +15,8 @@
 
 typedef	struct		s_uitoa
 {
-	int				index;
-	char			*str;
-}					t_uitoa;
+	int		index;
+	char		*str;
+}			t_uitoa;
 
 #endif

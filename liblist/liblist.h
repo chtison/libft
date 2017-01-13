@@ -41,8 +41,8 @@ t_list		*ft_list_init(void);
 ** - f: a function which will be called on every data in the list. Can be NULL
 ** [Returns] Always 0
 */
-int			ft_list_deinit(t_list *object,
-				void (*f)(void *data));
+int		ft_list_deinit(t_list *object,
+			void (*f)(void *data));
 
 /*
 ** [Reseter]
@@ -51,8 +51,8 @@ int			ft_list_deinit(t_list *object,
 ** - f: a function which will be called on every data in the list. Can be NULL
 ** [Returns] Always 0
 */
-int			ft_list_reset(t_list *object,
-				void (*f)(void *data));
+int		ft_list_reset(t_list *object,
+			void (*f)(void *data));
 
 /*
 ** =============================== Add things to the list
@@ -63,15 +63,15 @@ int			ft_list_reset(t_list *object,
 ** - data: the data you wish to save in the list
 ** [Returns] 0 on success
 */
-int			ft_list_push_front(t_list *object,
-				const void *data);
+int		ft_list_push_front(t_list *object,
+			const void *data);
 
-int			ft_list_push_back(t_list *object,
-				const void *data);
+int		ft_list_push_back(t_list *object,
+			const void *data);
 
-int			ft_list_push_at_index(t_list *object,
-				const void *data,
-				size_t index);
+int		ft_list_push_at_index(t_list *object,
+			const void *data,
+			size_t index);
 
 /*
 ** =============================== Look things in the list
@@ -84,7 +84,7 @@ void		*ft_list_peek_front(const t_list *object);
 void		*ft_list_peek_back(const t_list *object);
 
 void		*ft_list_peek_at_index(const t_list *object,
-				size_t index);
+			size_t index);
 
 /*
 ** =============================== Retrieve things from the list
@@ -97,7 +97,7 @@ void		*ft_list_pop_front(t_list *object);
 void		*ft_list_pop_back(t_list *object);
 
 void		*ft_list_pop_at_index(t_list *object,
-				size_t index);
+			size_t index);
 
 /*
 ** =============================== Through the list
@@ -109,8 +109,8 @@ void		*ft_list_pop_at_index(t_list *object,
 ** - 3 to delete (and stop)
 */
 void		ft_list_map(t_list *object,
-				void *custom,
-				int (*f)(const void **data, void *custom, size_t index));
+			void *custom,
+			int (*f)(const void **data, void *custom, size_t i));
 
 /*
 ** ------------------------------- Internal -------------------------------- **
@@ -124,7 +124,7 @@ t_list_node	*ft_list_create_node(void);
 /*
 ** [Returns] Always 0
 */
-int			ft_list_delete_node(t_list *object,
-				t_list_node *node);
+int		ft_list_delete_node(t_list *object,
+			t_list_node *node);
 
 #endif

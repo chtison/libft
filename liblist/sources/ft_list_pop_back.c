@@ -16,8 +16,8 @@
 
 void	*ft_list_pop_back(t_list *object)
 {
-	void			*data;
-	t_list_node		*prev;
+	void		*data;
+	t_list_node	*prev;
 
 	data = (void *)object->list->prev->data;
 	if (object->list->prev == object->list)

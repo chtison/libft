@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft/macros.h"
+#include "libft/misc/macros.h"
 #include "libft/liblist/liblist.h"
 
 void	ft_test1(void)

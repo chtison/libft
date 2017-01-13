@@ -15,12 +15,10 @@
 #include "libft/liblist/liblist.h"
 #include "libft/liblist/headers/t_list_node.h"
 
-static void	ft_sequel(t_list *object,
-			t_list_node *new,
-			size_t index)
+static void	ft_sequel(t_list *object, t_list_node *new, size_t index)
 {
-	t_list_node		*browser;
-	size_t			i;
+	t_list_node	*browser;
+	size_t		i;
 
 	browser = object->list;
 	i = 0;
@@ -37,8 +35,7 @@ static void	ft_sequel(t_list *object,
 	return ;
 }
 
-int			ft_list_push_at_index(t_list *object,
-			const void *data,
+int		ft_list_push_at_index(t_list *object, const void *data,
 			size_t index)
 {
 	t_list_node	*new;

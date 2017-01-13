@@ -13,8 +13,7 @@
 #include <stdlib.h>
 #include "libft/liblist/headers/t_list.h"
 
-void	*ft_list_peek_at_index(const t_list *object,
-			size_t index)
+void	*ft_list_peek_at_index(const t_list *object, size_t index)
 {
 	size_t		i;
 	t_list_node	*browser;

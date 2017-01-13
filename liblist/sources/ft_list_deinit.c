@@ -13,8 +13,7 @@
 #include <stdlib.h>
 #include "libft/liblist/headers/t_list.h"
 
-int		ft_list_deinit(t_list *object,
-			void (*f)(void *data))
+int		ft_list_deinit(t_list *object, void (*f)(void *data))
 {
 	object->reset(object, f);
 	free(object);

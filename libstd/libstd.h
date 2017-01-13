@@ -43,11 +43,11 @@ char	*ft_uitoa(size_t nbr);
 /*
 ** [Returns] (int)(*(const unsigned char *)s1 - *(const unsigned char *)s2)
 */
-int		ft_strcmp(const char *s1, const char *s2);
+int	ft_strcmp(const char *s1, const char *s2);
 
 /*
 ** [Returns] Always 0
 */
-int		ft_free(void *ptr);
+int	ft_free(void *ptr);
 
 #endif

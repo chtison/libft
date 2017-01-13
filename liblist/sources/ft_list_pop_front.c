@@ -16,8 +16,8 @@
 
 void	*ft_list_pop_front(t_list *object)
 {
-	void			*data;
-	t_list_node		*next;
+	void		*data;
+	t_list_node	*next;
 
 	data = (void *)object->list->data;
 	if (object->list->next == object->list)

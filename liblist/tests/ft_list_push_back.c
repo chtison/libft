@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft/macros.h"
+#include "libft/misc/macros.h"
 #include "libft/liblist/liblist.h"
 
 static void	ft_assert(size_t a, size_t b, char const *str)

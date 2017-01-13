@@ -19,7 +19,7 @@ void	ft_list_map(t_list *object,
 {
 	t_list_node		*browser;
 	size_t			i;
-	int				ret;
+	int			ret;
 
 	browser = object->list;
 	if (browser == NULL)

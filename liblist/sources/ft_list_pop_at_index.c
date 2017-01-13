@@ -13,12 +13,11 @@
 #include <stdlib.h>
 #include "libft/liblist/headers/t_list.h"
 
-void	*ft_list_pop_at_index(t_list *object,
-			size_t index)
+void	*ft_list_pop_at_index(t_list *object, size_t index)
 {
-	t_list_node		*browser;
-	size_t			i;
-	void			*data;
+	t_list_node	*browser;
+	size_t		i;
+	void		*data;
 
 	if (index >= object->count)
 		return (NULL);

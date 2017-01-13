@@ -15,8 +15,7 @@
 #include "libft/liblist/liblist.h"
 #include "libft/liblist/headers/t_list_node.h"
 
-int		ft_list_push_front(t_list *object,
-			const void *data)
+int		ft_list_push_front(t_list *object, const void *data)
 {
 	t_list_node	*new;
 
