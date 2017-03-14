@@ -13,8 +13,10 @@
 #ifndef MACROS_H
 # define MACROS_H
 
+/// @file
+
 # define LIKELY(x)		__builtin_expect(!!(x), 1)
-# define UNLIKELY(x)		__builtin_expect(!!(x), 0)
+# define UNLIKELY(x)	__builtin_expect(!!(x), 0)
 
 # define SUCCESS		0
 # define FAILURE		0

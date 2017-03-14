@@ -13,9 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "libft/misc/macros.h"
+/// @file
 
-# include "libft/liblist/liblist.h"
-# include "libft/libstd/libstd.h"
+# include "libft/misc/macros.h"
+# include "libft/libtest/libtest.h"
 
 #endif

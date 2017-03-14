@@ -42,7 +42,7 @@ fclean: clean
 re: fclean all
 
 tests/obj/%: tests/%.c obj/%.o
-	@$(GCC) $< $(NAME) $(LIBS) -o $@ $(TEST_CUSTOM)
+	@$(GCC) $< $(NAME) $(LIBS) ../libtest/libtest.a -o $@ $(TEST_CUSTOM)
 	@$(GCC) $< -MM | sed -E 's/^(.+\.o:)/tests\/obj\/\1/' > $(@:tests/obj/%=tests/obj/dep/%.d)
 -include $(TESTDEP)
 
@@ -52,6 +52,7 @@ libs:
 	@-for lib in $(foreach LIB, $(LIBS), $(dir $(LIB))) ; do cd $(PWD)/$$lib && $(MAKE) ; done
 
 test: all libs $(TESTOBJ)
+	@cd $(PWD)/../libtest && $(MAKE)
 	@-for file in $(TESTOBJ); do if [ -x $$file ]; then ./$$file ; fi ; done
 
 print-objs:
