@@ -1,7 +1,7 @@
 .PHONY: all prepare clean fclean re libs test print-objs
 # NAME  := name1.a
 # SRCS  := file1.c file2.c
-# LIBS  := ../libname2/libname2.a # This parameter is optional
+LIBS    := ../libtest/libtest.a # ../libname2/libname2.a
 GCC     := gcc -Wall -Wextra -Werror -Wconversion -pedantic -O3 -fsigned-char -I../..
 ifeq ($(shell uname -s), Darwin)
 AR      := ar -rcu

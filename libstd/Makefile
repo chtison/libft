@@ -1,7 +1,8 @@
 NAME := libstd.a
 SRCS := $(addsuffix .c, $(addprefix ft_, \
-			memset                       \
 			bzero                        \
+			memset                       \
+			strlen                       \
 		))
 
 include ../misc/Makefile.lib.mk
