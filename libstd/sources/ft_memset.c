@@ -8,9 +8,6 @@ void	*ft_memset(void *data, int c, size_t len)
 	d = (unsigned char *)data;
 	i = 0;
 	while (i < len)
-	{
-		d[i] = (unsigned char)c;
-		++i;
-	}
+		d[i++] = (unsigned char)c;
 	return (data);
 }

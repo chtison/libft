@@ -1,7 +1,7 @@
 .PHONY: all prepare clean fclean re libs test print-objs
 # NAME  := name1.a
 # SRCS  := file1.c file2.c
-LIBS    := ../libtest/libtest.a # ../libname2/libname2.a
+LIBS    := # ../libname2/libname2.a
 GCC     := gcc -Wall -Wextra -Werror -Wconversion -pedantic -O3 -fsigned-char -I../..
 ifeq ($(shell uname -s), Darwin)
 AR      := ar -rcu
@@ -16,7 +16,7 @@ SRCS    := $(addprefix sources/, $(SRCS))
 PWD     := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 DISPLAYNAME = echo "\033[35m-> \033[4mLibrary created\033[24m \033[31m[ \033[1m$(NAME)\033[22m ]\033[0m"
-DISPLAYOBJECT = echo "\033[34mObject file created : \033[1;34m$(PWD)/$@\033[0m"
+DISPLAYOBJECT = echo "\033[34mObject file created : \033[1;34m$(basename $(NAME))/$@\033[0m"
 
 all: prepare $(NAME)
 
@@ -52,7 +52,6 @@ libs:
 	@-for lib in $(foreach LIB, $(LIBS), $(dir $(LIB))) ; do cd $(PWD)/$$lib && $(MAKE) ; done
 
 test: all libs $(TESTOBJ)
-	@cd $(PWD)/../libtest && $(MAKE)
 	@-for file in $(TESTOBJ); do if [ -x $$file ]; then ./$$file ; fi ; done
 
 print-objs:

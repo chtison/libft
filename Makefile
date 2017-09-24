@@ -1,7 +1,7 @@
-.PHONY: all clean fclean re test doxygen doc
+.PHONY: all clean fclean re test
 
 NAME    := libft.a
-LIB_DIR := libtest libstd libint
+LIB_DIR := libstd
 
 ifeq ($(shell uname -s), Darwin)
 AR     := ar -rcu
@@ -32,19 +32,9 @@ clean:
 	@for DIR in $(LIB_DIR) ; do cd $(PWD)/$$DIR && $(MAKE) fclean ; done
 
 fclean: clean
-	rm  -f -- $(NAME)
-	rm -rf -- doc/
-
-test:
-	@for DIR in $(LIB_DIR) ; do cd $(PWD)/$$DIR && $(MAKE) test ; done
-
-doxygen: all
-	doxygen Doxyfile
-
-doc: doxygen
-	cd $(PWD)/doc/html && python -m SimpleHTTPServer 1999
+	rm -f -- $(NAME)
 
 re: fclean all
 
-workspace:
-	docker run -it --rm -h docker -v $(PWD):/libft -w /libft -p 1999 chtison/workspace
+test:
+	@for DIR in $(LIB_DIR) ; do cd $(PWD)/$$DIR && $(MAKE) test ; done
